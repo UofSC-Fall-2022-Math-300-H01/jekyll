@@ -22,6 +22,9 @@ url: 'https://300.f22.matthewrobertballard.com' # the base hostname & protocol f
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 # logo: '/assets/images/beta.png'
 
+pdf2svg: '/opt/homebrew/bin/pdf2svg' 
+destination: '~/Github/300/UofSC-Fall-2022-Math-300-H01.github.io'
+
 term: Fall 2022
 meeting_time: Mondays, Wednesdays, and Fridays 8:30-9:20 AM
 meeting_location: LeConte College Room 348
@@ -102,8 +105,8 @@ compress_html:
 
 google_analytics: G-PD0ZMVENHP
 
-kramdown:
-  math_engine: nil
+# kramdown:
+#   math_engine: nil
 #  parse_block_html: true
 
 plugins:

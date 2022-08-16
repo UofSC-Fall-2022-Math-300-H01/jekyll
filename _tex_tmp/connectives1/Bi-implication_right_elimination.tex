@@ -1,0 +1,16 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\infer0[\normalsize 1]{X}
+\ellipsis{}{\overline{Y}}
+\infer0[\normalsize 1]{Y}
+\ellipsis{}{\overline{X}}
+\infer2[\normalsize 1 $\leftrightarrow_I$]{X \leftrightarrow Y}
+\end{prooftree}
+        $$
+        \end{document}

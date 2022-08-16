@@ -9,10 +9,10 @@ Aug 22
 : [**HW 0 due**]({% link homework/00.md %}){: .label .label-red }
 
 Aug 24
-: And, or, and implies
-  : [Pre-reading]({% link notes/first_order_logic/connectives1.md %})
+: Propositions and proof
+  : [Pre-reading]({% link notes/first_order_logic/deduction.md %})
 
 Aug 26
-: False and contradiction
-  : [Pre-reading]({% link notes/first_order_logic/false.md %})
+: And, or, implies
+  : [Pre-reading]({% link notes/first_order_logic/connectives1.md %})
 

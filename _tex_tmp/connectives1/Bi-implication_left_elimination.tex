@@ -1,0 +1,19 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\hypo{X \leftrightarrow Y}
+\hypo{X}
+\infer2[\normalsize $\leftrightarrow_{E_L}$]{Y}
+\end{prooftree} \ \ 
+\begin{prooftree}
+\hypo{X \leftrightarrow Y}
+\hypo{Y}
+\infer2[\normalsize $\leftrightarrow_{E_R}$]{X}
+\end{prooftree}
+        $$
+        \end{document}
