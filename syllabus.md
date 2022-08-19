@@ -155,7 +155,12 @@ If you have problems with your computer, technology, IT-related questions, suppo
 
 ## Homework	 
 
-Homework will need to be completed in groups of 3-4 that will be randomly assigned each week. The assignments will be available in and must be returned through Microsoft Teams. All homework assignments are due by 11:59 pm (Eastern Time) on the day indicated on the course schedule. Homework will be graded for correctness. You will be allowed up to two revisions on each homework assignment. 
+Homework will need to be completed in groups of 3-4 that will be randomly
+assigned each week. The assignments will be available in and must be returned
+through GitHub Classroom. All homework assignments are due by 11:59 pm (Eastern
+Time) on the day indicated on the course schedule. Homework will be graded for
+correctness. You will be allowed up to two revisions on each homework
+assignment. 
 
 ## Quizzes 
 
