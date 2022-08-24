@@ -1,0 +1,23 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\infer0[\normalsize 1]{A \lor B}
+\infer0[\normalsize 0]{\neg A \land \neg B} 
+\infer1[\normalsize $\land_{E_l}$]{\neg A}
+\infer0[\normalsize 2]{A} 
+\infer2[\normalsize $\neg_E$]{\bot}
+\infer0[\normalsize 0]{\neg A \land \neg B} 
+\infer1[\normalsize $\land_{E_r}$]{\neg B}
+\infer0[\normalsize 2]{B}
+\infer2[\normalsize $\neg_E$]{\bot}
+\infer3[\normalsize 2 $\lor_E$]{\bot}
+\infer1[\normalsize 1 $\neg_I$]{\neg (A \lor B)}
+\infer1[\normalsize 0 $\to_I$]{\neg A \land \neg B \to \neg(A \lor B)}
+\end{prooftree}
+        $$
+        \end{document}
