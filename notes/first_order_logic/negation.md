@@ -166,3 +166,11 @@ no matter how we interpret $A$ and $B$.
 For example, if we say $A$ is "the sun is out" and $B$ is "it is night". Then we 
 the proof above 
 
+## Some conventions
+
+Expressions like $\neg \neg A$ are pretty un-ambiguous and we declare that $\neg$ binds 
+most closely. So for example
+$$
+\neg A \to B := (\neg A) \to B \\
+\neg C \lor D:= (\neg C) \lor D
+$$

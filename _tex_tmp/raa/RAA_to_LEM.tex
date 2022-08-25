@@ -1,0 +1,19 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\infer0[\normalsize 1]{\neg(A \lor \neg A)} 
+\infer0[\normalsize 1]{\neg(A \lor \neg A)}
+\infer0[\normalsize 0]{A}
+\infer2[\normalsize $\neg$ E]{\bot}
+\infer1[\normalsize 0 $\neg$ I]{\neg A}
+\infer1[\normalsize $\lor$ I${}_r$]{A \lor \neg A}
+\infer2[\normalsize 1 $\neg$ E]{\bot}
+\infer1[\normalsize RAA]{A \lor \neg A}
+\end{prooftree}
+        $$
+        \end{document}

@@ -1,0 +1,16 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\hypo{ (A \land B) \land C } \infer1{ A \land B } \infer1{A}
+\hypo{ (A \land B) \land C } \infer1{ A \land B } \infer1{B}
+\hypo{ (A \land B) \land C } \infer1{ C }
+\infer2{ B \land C}
+\infer2{ A \land (B \land C) }
+\end{prooftree}
+        $$
+        \end{document}

@@ -1,0 +1,15 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\hypo{A \lor B} 
+\infer0[\normalsize 1]{A} \ellipsis{}{ \overline{C} }
+\infer0[\normalsize 1]{B} \ellipsis{}{ \overline{C} }
+\infer3[\normalsize 1 $~\lor_E$]{C}
+\end{prooftree}
+        $$
+        \end{document}

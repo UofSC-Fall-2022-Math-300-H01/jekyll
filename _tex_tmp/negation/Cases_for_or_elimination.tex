@@ -1,0 +1,22 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\hypo{\neg A \land \neg B}
+\infer1{\neg A}
+\hypo{A}
+\infer2{\bot}
+\end{prooftree}
+\ \ 
+\begin{prooftree}
+\hypo{\neg A \land \neg B}
+\infer1{\neg B}
+\hypo{B}
+\infer2{\bot}
+\end{prooftree}
+        $$
+        \end{document}
