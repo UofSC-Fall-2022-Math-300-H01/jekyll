@@ -1,0 +1,23 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\infer0[\normalsize 0]{A \lor B \to C} 
+\infer0[\normalsize 1]{A} 
+\infer1[\normalsize $\lor I_l$]{A \lor B} 
+\infer2[\normalsize $\to E$]{C}
+\infer1[\normalsize 1 $\to I$]{A \to C}
+\hypo{A \lor B \to C} 
+\infer0[\normalsize 2]{B} 
+\infer1[\normalsize $\lor I_r$]{A \lor B} 
+\infer2[\normalsize $\to E$]{C}
+\infer1[\normalsize 2 $\to I$]{B \to C}
+\infer2[\normalsize $\land$ I]{(A \to C) \land (B \to C)}
+\infer1[\normalsize 0 $\to$ I]{(A \lor B) \to C \to ((A \to C) \land (B \to C)}
+\end{prooftree}
+        $$
+        \end{document}

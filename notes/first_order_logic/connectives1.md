@@ -195,3 +195,107 @@ If we have a proofs $X \vdash Y$ and $Y \vdash X$ then we can conclude $X \leftr
 \infer2[\normalsize 1 $\leftrightarrow_I$]{X \leftrightarrow Y}
 \end{prooftree}
 {% endeqn %}
+
+Let's do an example proof to see how these rules interact. 
+
+**Example**. Let's show that 
+$$
+(A \to B) \land (B \to C) \vdash A \to C
+$$
+So if $A$ implies and $B$ implies $C$, then $A$ implies $C$ if we intrepret it using words.
+
+{% proof %}
+To prove $A \to C$, we want introduce a $\to$. This introduce says we can conclude $A \to C$ 
+if we can establish $A \vdash C$. Thus, we can reduce to proving
+$$
+(A \to B) \land (B \to C), A \vdash C
+$$
+With $A$ and $A \to B$, we can eliminate to $B$. Then with $B$ and $B \to C$, we can eliminate 
+to $C$. Below is a full proof.
+
+{% eqn Transitivity_of_implication %}
+\begin{prooftree}
+\infer0[\normalsize 1]{A} 
+\hypo{(A \to B) \land (B \to C)}
+\infer1[\normalsize $\land E_l$]{A \to B}\
+\infer2[\normalsize $\to E$]{B}
+\hypo{(A \to B) \land (B \to C)}
+\infer1[\normalsize $\land E_r$]{B \to C}
+\infer2[\normalsize $\to E$]{C}
+\infer1[\normalsize 1 $\to I$]{A \to C}
+\end{prooftree}
+{% endeqn %}
+{% endproof %}
+
+Here is another example. 
+
+**Example**. Let's establish 
+$$
+((A \lor B) \to C) \to ((A \to C) \land (B \to C))
+$$
+
+{% proof %}
+Recall that 
+$$
+((A \lor B) \to C) \to ((A \to C) \land (B \to C))
+$$
+is shorthand for 
+$$
+\vdash ((A \lor B) \to C) \to ((A \to C) \land (B \to C))
+$$
+In other words, we want to proof the formula without assumptions. 
+
+We "backwards" similarly to the last example. To establish a goal of the form $X \to Y$, 
+we need $X \vdash Y$. So it suffices to show 
+$$
+((A \lor B) \to C) \vdash ((A \to C) \land (B \to C))
+$$
+Now to establish a goal with $\land$ we want to prove both sides of the $\land$. So we 
+need two proofs
+$$
+(A \lor B) \to C \vdash A \to C \\
+(A \lor B) \to C \vdash B \to C 
+$$
+Again we can reverse the introduction rule for $\to$ to reduce to 
+$$
+(A \lor B) \to C, A \vdash C \\
+(A \lor B) \to C, B \vdash C 
+$$
+We can use the introduction rules for $\lor$ to produce $A \lor B$ from either $A$ or $B$. 
+
+Putting it all together we have 
+{% eqn Example_2 %}
+\begin{prooftree}
+\infer0[\normalsize 0]{A \lor B \to C} 
+\infer0[\normalsize 1]{A} 
+\infer1[\normalsize $\lor I_l$]{A \lor B} 
+\infer2[\normalsize $\to E$]{C}
+\infer1[\normalsize 1 $\to I$]{A \to C}
+\hypo{A \lor B \to C} 
+\infer0[\normalsize 2]{B} 
+\infer1[\normalsize $\lor I_r$]{A \lor B} 
+\infer2[\normalsize $\to E$]{C}
+\infer1[\normalsize 2 $\to I$]{B \to C}
+\infer2[\normalsize $\land$ I]{(A \to C) \land (B \to C)}
+\infer1[\normalsize 0 $\to$ I]{(A \lor B) \to C \to ((A \to C) \land (B \to C)}
+\end{prooftree}
+{% endeqn %}
+{% endproof %}
+
+## Some conventions 
+
+Writing out lots of $( \ )$ is tedious after awhile. We therefore establish some 
+conventions on how to read a formula without paretheses. 
+
+First, all of $\to, \land,$ and $\lor$ associate right to left. This means that 
+$$
+A \lor B \lor C := A \lor (B \lor C)
+$$
+
+Then $\to$ binds more weakly that both $\lor$ and $\land$. For example
+$$
+A \lor B \to C \land D := (A \lor B) \to (C \land D)
+$$
+
+It is important to remember that, in general, the placement of parentheses makes a 
+difference!
