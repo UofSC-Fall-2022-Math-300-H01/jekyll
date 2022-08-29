@@ -10,3 +10,8 @@ Take a look at
 - the schedule for [this week]({% link calendar.md %})
 - and the [homework]({% link homework/02.md %}) for this week. 
 
+The due date for [homework 2]({% link homework/02.md %}) has been 
+pushed back to Tuesday September 6 due to Labor Day. 
+
+Note: your files in GitHub classroom will **not** update to reflect 
+this. 
