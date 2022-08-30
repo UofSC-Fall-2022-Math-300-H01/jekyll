@@ -1,6 +1,6 @@
 ---
 layout: page
-title: First order logic
+title: Propositional logic
 nav_order: 1
 has_children: true
 parent: Notes

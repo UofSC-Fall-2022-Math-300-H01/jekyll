@@ -1,5 +1,5 @@
 ---
-title: First order logic
+title: Propositional logic
 ended: false
 ---
 
@@ -10,22 +10,22 @@ Aug 22
 
 Aug 24
 : Propositions and proof
-  : [Pre-reading]({% link notes/first_order_logic/deduction.md %})
+  : [Pre-reading]({% link notes/propositional_logic/deduction.md %})
 
 Aug 26
 : And, or, implies
-  : [Pre-reading]({% link notes/first_order_logic/connectives.md %})
+  : [Pre-reading]({% link notes/propositional_logic/connectives.md %})
 
 Aug 29
 : Not 
-  : [Pre-reading]({% link notes/first_order_logic/negation.md %})
+  : [Pre-reading]({% link notes/propositional_logic/negation.md %})
 : [**HW 1 due**]({% link homework/01.md %}){: .label .label-red }
 
 Aug 31
 : Reductio ad absurdum 
-  : [Pre-reading]({% link notes/first_order_logic/raa.md %})
+  : [Pre-reading]({% link notes/propositional_logic/raa.md %})
 
 Sep 2
 : Intepretations and truth tables
-  : [Pre-reading]({% link notes/first_order_logic/models.md %})
+  : [Pre-reading]({% link notes/propositional_logic/models.md %})
 

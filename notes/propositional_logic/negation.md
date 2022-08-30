@@ -4,7 +4,7 @@ title: Not
 nav_order: 3
 has_children: false
 has_toc: false
-parent: First order logic
+parent: Propositional logic
 grand_parent: Notes
 ---
 
@@ -13,7 +13,7 @@ grand_parent: Notes
 In a debate or a courtroom, there are usually two opposing sides. One is 
 arguing for $A$ and the other is arguing for *not* $A$. 
 
-In first order logic, we introduce a symbol in the place of not: negation. 
+In propositional logic, we introduce a symbol in the place of not: negation. 
 It is denoted by $\neg$. 
 
 Given a formula $A$, then we can make a new one $\neg A$. But what should 
@@ -163,8 +163,12 @@ Note that all assumptions are cancelled.
 Ok so what is the value of this result? It gives a method of proof that holds 
 no matter how we interpret $A$ and $B$.
 
-For example, if we say $A$ is "the sun is out" and $B$ is "it is night". Then we 
-the proof above 
+For example, if we say $A$ is "it is hot out" and $B$ is "it is raining", then 
+we can interpret the above as saying "if I know that the either it is not hot 
+out or it is not raining, then I can conclude that it is not both hot and sunny". 
+
+Each of formula that we can prove symbolically is an argument pattern that 
+can be applied in any context. 
 
 ## Some conventions
 

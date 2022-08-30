@@ -7,7 +7,7 @@ module Jekyll
 
         output = <<~EOS
           <details markdown="block">
-          <summary>
+          <summary markdown="span">
           <b>Proof</b>. (Expand to view)
           </summary> 
           <p>#{text} <span style="float:right;"> &#9632; </span></p>

@@ -1,0 +1,18 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\hypo{A \to B}
+\infer0[\normalsize 0]{A}
+\infer2{B}
+\infer0[\normalsize 1]{\neg B}
+\infer2{\bot}
+\infer1[\normalsize 0]{\neg A}
+\infer1[\normalsize 1]{\neg B \to \neg A}
+\end{prooftree}
+        $$
+        \end{document}

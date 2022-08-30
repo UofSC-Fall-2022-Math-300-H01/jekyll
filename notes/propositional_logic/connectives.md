@@ -4,7 +4,7 @@ title: And, or, implies
 nav_order: 2
 has_children: false
 has_toc: false
-parent: First order logic
+parent: Propositional logic
 grand_parent: Notes
 ---
 

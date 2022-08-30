@@ -4,7 +4,7 @@ title: Reductio ad absurdum
 nav_order: 4
 has_children: false
 has_toc: false
-parent: First order logic
+parent: Propositional logic 
 grand_parent: Notes
 ---
 
@@ -64,3 +64,37 @@ Below is a proof the Law of Excluded Middle using proof by contradiction.
 \end{prooftree}
 {% endeqn %}
 
+Given an formula of the form $A \to B$, the _contrapositive_ is the formula 
+$$
+\neg B \to \neg A
+$$
+
+Let's justify 
+$$
+A \to B \vdash \neg B \to \neg A 
+$$
+
+Below is a natural deduction proof
+{% eqn Implies_contrapositive %}
+\begin{prooftree}
+\hypo{A \to B}
+\infer0[\normalsize 0]{A}
+\infer2{B}
+\infer0[\normalsize 1]{\neg B}
+\infer2{\bot}
+\infer1[\normalsize 0]{\neg A}
+\infer1[\normalsize 1]{\neg B \to \neg A}
+\end{prooftree}
+{% endeqn %}
+
+If we substitute $\neg B$ for $A$ and $\neg A$ for $B$, we immediately have 
+$$
+\neg B \to \neg A \vdash (\neg \neg A) \to (\neg \neg B)
+$$
+With proof by contradiction, we get
+$$
+\neg B \to \neg A \vdash A \to B
+$$
+
+Establishing the contrapositive and deducing the original statement is 
+uncommonly common pattern in mathematical argument.  
