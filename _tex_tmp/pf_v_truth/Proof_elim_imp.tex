@@ -1,0 +1,16 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\hypo{(A \to B) \land A}
+\infer1{A \to B}
+\hypo{(A \to B) \land A}
+\infer1{A}
+\infer2{B}
+\end{prooftree}
+        $$
+        \end{document}

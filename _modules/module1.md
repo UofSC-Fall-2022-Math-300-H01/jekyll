@@ -29,3 +29,11 @@ Sep 2
 : Intepretations and truth tables
   : [Pre-reading]({% link notes/propositional_logic/models.md %})
 
+Sep 7
+: Proof vs truth
+  : [Pre-reading]({% link notes/propositional_logic/pf_v_truth.md %})
+: [**HW 2 due**]({% link homework/02.md %}){: .label .label-red }
+
+Sep 9
+: Useful formula in propositional logic
+  : [Pre-reading]({% link notes/propositional_logic/useful_facts.md %})
