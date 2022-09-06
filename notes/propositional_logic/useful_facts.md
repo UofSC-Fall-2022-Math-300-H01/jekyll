@@ -16,7 +16,7 @@ logic), we want to get to using our new logical skills on mathematical
 questions. 
 
 As such, let's end the module on propositional logic with a list of 
-useful and/or well-known provable formulas. 
+useful and/or well-known provable formulas. Below $A,B,C$ are general formula.
 
 - $$A \land B \leftrightarrow B \land A$$ When we can exchange the placement of 
 an operation taking two inputs (binary operation), then we say it is *commutative*. 
@@ -46,6 +46,10 @@ $$ A \lor (B \land C) \leftrightarrow (A \lor B) \land (A \lor C)$$
 - $$(A \to B) \leftrightarrow (\neg B \to \neg A)$$
 - $$(A \to (B \lor C)) \to ((A \to B) \lor (A \to C))$$
 <!-- - $$((A \to B) \to A) \to A$$ -->
+- If $B \leftrightarrow C$, then for any $A$ we have 
+	- $$ A \lor B \leftrightarrow A \lor C$$
+	- $$ A \land B \leftrightarrow A \land C$$
+	- $$ A \to B \leftrightarrow A \to C$$
 
 Each of the above can provide a useful logical shortcut when in the midst of a 
 mathematical argument. 
