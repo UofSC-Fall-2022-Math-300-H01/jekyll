@@ -1,0 +1,59 @@
+I"
+<h2 id="proof-by-contradiction">Proof by contradiction</h2>
+
+<p>Suppose I can establish an absurdity by assuming the negation of something. 
+What does this give us? Well, given $\neg A \vdash \bot$, we can prove 
+$\neg \neg A$.</p>
+
+<p>If we that the sun is not not up, that usually means that it is actually 
+up, right?</p>
+
+<p>More formally, we want to know about jutisfying 
+\(\neg \neg A \vdash A\)
+Can this be done using the rules so far?</p>
+
+<p>Unfortunately, <strong>nothing</strong> in our rules so far will allow us establish this. 
+Adding this rule to our existing system yields some very useful conclusions.</p>
+
+<p>For example, given $\neg A \vdash \bot$, we already knew we could establish 
+$\vdash \neg \neg A$ but now we also have $\vdash A$.</p>
+
+<p>The process of establishing $A$ by assuming $A$ doesn’t hold and arguing to a
+contradiction goes by the <em>Reductio ad absurdum</em> (RAA) or <em>proof by contradiction</em>.</p>
+
+<p>Another well-known conclusion is the <em>Law of the Excluded Middle</em> which is 
+just 
+\(A \lor \neg A\)
+In other words, no matter what $A$ is either $A$ holds or it is doesn’t.</p>
+
+<p>You might take a moment and think this an immutable law of reality. 
+Our day-to-day experience definitely leads us to think this. But reality in 
+general is more complicated. Think of <a href="https://en.wikipedia.org/wiki/Schrödinger%27s_cat">Schrodinger’s
+cat</a>. Is the cat alive or 
+not alive in the box? What is the state of the unobserved wave function?</p>
+
+<p>But in an idealized world proof by contradiction is a perfectly reasonable 
+assumption. And mathematicians, for the most part, tend to idealize our 
+world.</p>
+
+<p>Below is a proof the Law of Excluded Middle using proof by contradiction.</p>
+
+<center> <img src="/assets/images/png/raa/RAA_to_LEM.png" title="RAA to LEM" alt="RAA to LEM" /> </center>
+
+<p>Given an formula of the form $A \to B$, the <em>contrapositive</em> is the formula 
+\(\neg B \to \neg A\)</p>
+
+<p>Let’s justify 
+\(A \to B \vdash \neg B \to \neg A\)</p>
+
+<p>Below is a natural deduction proof</p>
+<center> <img src="/assets/images/png/raa/Implies_contrapositive.png" title="Implies contrapositive" alt="Implies contrapositive" /> </center>
+
+<p>If we substitute $\neg B$ for $A$ and $\neg A$ for $B$, we immediately have 
+\(\neg B \to \neg A \vdash (\neg \neg A) \to (\neg \neg B)\)
+With proof by contradiction, we get
+\(\neg B \to \neg A \vdash A \to B\)</p>
+
+<p>Establishing the contrapositive and deducing the original statement is 
+uncommonly common pattern in mathematical argument.</p>
+:ET

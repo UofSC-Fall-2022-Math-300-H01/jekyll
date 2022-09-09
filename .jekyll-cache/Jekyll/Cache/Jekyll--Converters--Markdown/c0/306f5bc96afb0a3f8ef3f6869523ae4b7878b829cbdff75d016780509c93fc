@@ -1,0 +1,106 @@
+I"C	<h1 id="announcements">Announcements</h1>
+
+<!-- Announcements are stored in the `_announcements` directory and rendered according to the layout file, `_layouts/announcement.html`. -->
+
+<div class="announcement">
+  <h2>Week 4 Announcement</h2>
+  <span class="announcement-meta">
+    
+    Sep  9
+    &middot;
+    
+    
+    0 min read
+  </span>
+  <div>
+    <p>Be sure to bring a laptop to class this week if you have one.</p>
+
+<p>Take a look at</p>
+<ul>
+  <li>the schedule for <a href="/calendar/">this week</a></li>
+  <li>and the <a href="/homework/04/">homework</a> for this week.</li>
+</ul>
+
+
+  </div>
+</div>
+
+<div class="announcement">
+  <h2>Week 3 Announcement</h2>
+  <span class="announcement-meta">
+    
+    Sep  2
+    &middot;
+    
+    
+    0 min read
+  </span>
+  <div>
+    <p><strong>We will return to in-person instruction on Wednesday Sept 7 
+in LC Room 348</strong></p>
+
+<p>Take a look at</p>
+<ul>
+  <li>the schedule for <a href="/calendar/">this week</a></li>
+  <li>and the <a href="/homework/03/">homework</a> for this week.</li>
+</ul>
+
+
+  </div>
+</div>
+
+<div class="announcement">
+  <h2>Week 2 Announcement</h2>
+  <span class="announcement-meta">
+    
+    Aug 26
+    &middot;
+    
+    
+    0 min read
+  </span>
+  <div>
+    <p>We are still virtual through Microsoft Teams this week.</p>
+
+<p>Take a look at</p>
+<ul>
+  <li>the schedule for <a href="/calendar/">this week</a></li>
+  <li>and the <a href="/homework/02/">homework</a> for this week.</li>
+</ul>
+
+<p>The due date for <a href="/homework/02/">homework 2</a> has been 
+pushed back to Tuesday September 6 due to Labor Day.</p>
+
+<p>Note: your files in GitHub classroom will <strong>not</strong> update to reflect 
+this.</p>
+
+  </div>
+</div>
+
+<div class="announcement">
+  <h2>Week 1 Announcement</h2>
+  <span class="announcement-meta">
+    
+    Aug 19
+    &middot;
+    
+    
+    0 min read
+  </span>
+  <div>
+    <p>Welcome to Transition to Advanced Mathematics!</p>
+
+<p>To be prepared for the first class, make sure you</p>
+<ul>
+  <li><a href="/syllabus/">read the syllabus</a></li>
+  <li><a href="/homework/00/">check homework 0</a></li>
+  <li><a href="mailto:ballard@math.sc.edu">reach out</a> with any questions.</li>
+</ul>
+
+<p><strong>Due to delays in the renovation of LeConte College, class meetings will be virtual 
+through Microsoft Teams until (at least) 2022.09.07.</strong></p>
+
+  </div>
+</div>
+
+:ET

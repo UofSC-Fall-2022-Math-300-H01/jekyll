@@ -1,0 +1,94 @@
+I"J<h2 id="propositions-in-lean">Propositions in Lean</h2>
+
+<p>The engine that makes Lean interactive theorem verifier and prover is 
+the idea that every piece of data has a type. This include mathematical 
+data. So the natural numbers have (are) a type <code class="language-plaintext highlighter-rouge">Nat</code> as are the real numbers. 
+Individual natural numbers are called <em>terms</em> of type <code class="language-plaintext highlighter-rouge">Nat</code>. To 
+express this relationship, we write <code class="language-plaintext highlighter-rouge">5: Nat</code>. If you know a little set 
+theory, it will be harmless to imagine replacing the semi-colon with an 
+element symbol $\in$.</p>
+
+<p>Lean has type for propositions called <code class="language-plaintext highlighter-rouge">Prop</code>. We can think of this as the 
+whole universe of possible propositions. A term of <code class="language-plaintext highlighter-rouge">Prop</code> is a individual 
+proposition.</p>
+
+<p>Suppose I have propositional variables $A,B,C$ in my logic. How do 
+I tell Lean about them? We declare them as variables.</p>
+
+<figure class="highlight"><pre><code class="language-lean" data-lang="lean"><span class="k">variable</span> (<span class="n">A</span> <span class="n">B</span> <span class="n">C</span> : <span class="kt">Prop</span>) </code></pre></figure>
+
+<p>A useful tool built into the system is the ability to check what 
+Lean believes an expression means.</p>
+
+<figure class="highlight"><pre><code class="language-lean" data-lang="lean"><span class="k">variable</span> (<span class="n">D</span> : <span class="kt">Prop</span>)
+<span class="k">#check</span> <span class="n">D</span> </code></pre></figure>
+
+<p>The window pane on the right hand side of the editor reports <code class="language-plaintext highlighter-rouge">D: Prop</code> 
+which Lean reporting back that indeed it thinks <code class="language-plaintext highlighter-rouge">D</code> is a proposition.</p>
+
+<p>Next we can combine propositional variables into formulas.</p>
+
+<h2 id="connectives">Connectives</h2>
+
+<p>Let’s see how each of our connectives, $\neg, \to, \lor, \land,$ and 
+$\leftrightarrow$ are encoded in Lean.</p>
+
+<p>Here is negation</p>
+
+<figure class="highlight"><pre><code class="language-lean" data-lang="lean"><span class="k">variable</span> (<span class="n">A</span> : <span class="kt">Prop</span>)
+<span class="k">#check</span> <span class="o">¬</span> <span class="n">A</span> </code></pre></figure>
+
+<p>Lean tells that indeed <code class="language-plaintext highlighter-rouge">¬ A : Prop</code>. Note that ¬ is a Unicode symbol 
+(like emoji). In general, we do not have those on our keyboard but 
+the editor nows how to fill it in if we type <code class="language-plaintext highlighter-rouge">\neg</code> and hit the spacebar.</p>
+
+<p>Unicode is pretty but we can also use standard (ASCII) characters to 
+access negation.</p>
+
+<figure class="highlight"><pre><code class="language-lean" data-lang="lean"><span class="k">variable</span> (<span class="n">A</span> : <span class="kt">Prop</span>)
+<span class="k">#check</span> <span class="n">Not</span> <span class="n">A</span> </code></pre></figure>
+
+<p>will also report <code class="language-plaintext highlighter-rouge">¬ A : Prop</code>.</p>
+
+<p>We mentioned that everything in Lean has a type. What about Not? Checking 
+it returns <code class="language-plaintext highlighter-rouge">Not : Prop → Prop</code>. If we interpret this (Unicode) arrow as 
+an assignment, this makes sense. Given a formula <code class="language-plaintext highlighter-rouge">X</code>, <code class="language-plaintext highlighter-rouge">¬ X</code> is another one.</p>
+
+<p>Next, we turn to implication, $\to$. It has the same Unicode arrow (
+typeset as <code class="language-plaintext highlighter-rouge">\to</code>)</p>
+
+<figure class="highlight"><pre><code class="language-lean" data-lang="lean"><span class="k">variable</span> (<span class="n">A</span> <span class="n">B</span> : <span class="kt">Prop</span>)
+<span class="k">#check</span> <span class="n">A</span> <span class="o">→</span> <span class="n">B</span></code></pre></figure>
+
+<p>gives that <code class="language-plaintext highlighter-rouge">A → B : Prop</code>.</p>
+
+<p>For conjunction, $\land$, we have (at least) three notations that all 
+work:</p>
+
+<figure class="highlight"><pre><code class="language-lean" data-lang="lean"><span class="k">variable</span> (<span class="n">A</span> <span class="n">B</span> : <span class="kt">Prop</span>)
+<span class="k">#check</span> <span class="n">A</span> <span class="o">∧</span> <span class="n">B</span>
+<span class="k">#check</span> <span class="n">And</span> <span class="n">A</span> <span class="n">B</span> 
+<span class="k">#check</span> <span class="n">A</span> <span class="o">/</span><span class="err">\</span> <span class="n">B</span></code></pre></figure>
+
+<p>Here <code class="language-plaintext highlighter-rouge">∧</code> is typed using <code class="language-plaintext highlighter-rouge">\and</code>.</p>
+
+<p>Next we have disjunction.</p>
+
+<figure class="highlight"><pre><code class="language-lean" data-lang="lean"><span class="k">variable</span> (<span class="n">A</span> <span class="n">B</span> : <span class="kt">Prop</span>)
+<span class="k">#check</span> <span class="n">A</span> <span class="o">∨</span> <span class="n">B</span> <span class="o">/-</span> <span class="n">typed</span> <span class="n">as</span> <span class="err">\</span><span class="n">or</span> <span class="o">-/</span>
+<span class="k">#check</span> <span class="n">Or</span> <span class="n">A</span> <span class="n">B</span> 
+<span class="k">#check</span> <span class="n">A</span> <span class="err">\</span><span class="o">/</span> <span class="n">B</span></code></pre></figure>
+
+<p>Note the text between <code class="language-plaintext highlighter-rouge">/- -/</code>. This tells Lean that to ignore the what is 
+written. They are only comments and not commands.</p>
+
+<p>Finally, bi-implication.</p>
+
+<figure class="highlight"><pre><code class="language-lean" data-lang="lean"><span class="k">variable</span> (<span class="n">A</span> <span class="n">B</span> : <span class="kt">Prop</span>)
+<span class="k">#check</span> <span class="n">A</span> <span class="o">↔</span> <span class="n">B</span> <span class="o">/-</span> <span class="n">typed</span> <span class="n">as</span> <span class="err">\</span><span class="n">iff</span> <span class="o">-/</span>
+<span class="k">#check</span> <span class="n">Iff</span> <span class="n">A</span> <span class="n">B</span> </code></pre></figure>
+
+<p>Aside from negation, all of the other connectives take in two formulas and 
+yield a single one. So if you <code class="language-plaintext highlighter-rouge">#check Iff</code> you will get <code class="language-plaintext highlighter-rouge">Iff : Prop → Prop 
+→ Prop</code>. What happens if you <code class="language-plaintext highlighter-rouge">#check ↔</code>?</p>
+:ET

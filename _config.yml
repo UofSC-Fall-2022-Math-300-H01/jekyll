@@ -105,6 +105,9 @@ compress_html:
 
 google_analytics: G-PD0ZMVENHP
 
+# markdown: kramdown
+# highlighter: rouge
+  # input: GFM
 # kramdown:
 #   math_engine: nil
 #  parse_block_html: true

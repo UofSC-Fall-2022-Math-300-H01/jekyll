@@ -1,0 +1,25 @@
+I"I<dl>
+  <dt>Sep 12</dt>
+  <dd>
+    <dl>
+      <dt>Propositions and connectives</dt>
+      <dd><a href="/notes/lean/formulas/">Pre-reading</a></dd>
+    </dl>
+  </dd>
+  <dd><a href="/homework/03/" class="label label-red"><strong>HW 3 due</strong></a></dd>
+  <dt>Sep 14</dt>
+  <dd>
+    <dl>
+      <dt>Proofs and first rules of inference</dt>
+      <dd><a href="/notes/lean/rules/">Pre-reading</a></dd>
+    </dl>
+  </dd>
+  <dt>Sep 16</dt>
+  <dd>
+    <dl>
+      <dt>More proofs and rules of inference</dt>
+      <dd><a href="/notes/lean/proofs/">Pre-reading</a></dd>
+    </dl>
+  </dd>
+</dl>
+:ET

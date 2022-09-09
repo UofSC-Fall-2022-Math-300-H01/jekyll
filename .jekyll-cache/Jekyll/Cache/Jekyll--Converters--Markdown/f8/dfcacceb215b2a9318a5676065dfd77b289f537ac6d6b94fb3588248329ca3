@@ -1,0 +1,171 @@
+I"^<h2 id="propositions">Propositions</h2>
+
+<p>We start with the basic building blocks of first-order logic: <em>propositions</em>. 
+The collection of propositions is simply a collection of symbols. Common 
+ones are based on the Roman or Greek alphabets, e.g.
+\(A, B, C ,\ldots \\
+ \alpha, \beta, \gamma, \ldots\)
+But we could just as easily using emoji for our symbols</p>
+<center>
+😉, 🤯, 🌭, . . . 
+</center>
+<p>Right now, they have no meaning attached.</p>
+
+<p>Given a set of propositions, we next need rules to combine them into expressions.</p>
+
+<h2 id="deduction">Deduction</h2>
+
+<p>The operations we use to combine expressions will reflect oft-occuring structures 
+in human reason. But, we also need to model the common steps in deduction. Here there are 
+two separate roles: <em>assumptions</em> we are given and <em>goals</em> we want to establish 
+(if we can).</p>
+
+<p>In the written (or natural) language, you might see.</p>
+
+<p><strong>Example</strong>. If $n$ and $m$ are even integers, then so is $n-m$.</p>
+
+<p>Recall here that the <em>integers</em> are 
+\(\mathbb{Z} = \lbrace \ldots, -2,-1,0,1,2, \ldots \rbrace\)</p>
+
+<p>This could also be written as</p>
+
+<p><strong>Example</strong>. Let $n$ and $m$ be even integers. The integer $n-m$ is also an even 
+integer.</p>
+
+<p>While the latter example is not written an explicit if-then the content is the same. 
+Our set of assumptions is $n$ and $m$ are even integers while our goal is $n-m$ 
+is an even integer.</p>
+
+<p>Let’s write down a proof of these statements. We can represent as a table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assumptions</th>
+      <th>Goal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$n, m$ even</td>
+      <td>$n-m$ is even</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Mathematics is well-known for compact (and difficult) notation. In a proof, it is 
+often valuable to unfold the definitions into the statement they represent. We perform 
+this operation on the assumptions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assumptions</th>
+      <th>Goal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$n = 2c$ for some integer $c$</td>
+      <td>$n-m$ is even</td>
+    </tr>
+    <tr>
+      <td>$m = 2d$ for some integer $d$</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We also rewrite the goal in the same way.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assumptions</th>
+      <th>Goal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$n = 2c$ for some integer $c$</td>
+      <td>$n-m = 2e$ for some integer $e$</td>
+    </tr>
+    <tr>
+      <td>$m = 2d$ for some integer $d$</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>To achieve our goal, we want to exhibit the desired $e$ using the assumptions at hand. 
+To make progress, we import another “known fact” into the assumptions context: 
+distribution of multiplication over subtraction.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assumptions</th>
+      <th>Goal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$n = 2c$ for some integer $c$</td>
+      <td>$n-m = 2e$ for some integer $e$</td>
+    </tr>
+    <tr>
+      <td>$m = 2d$ for some integer $d$</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>$u(v-w) = uv-uw$ for all integers $u,v,w$</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now we can an apply distribution with $u = 2, v = c, w = d$ to gain another statement and 
+finish.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assumptions</th>
+      <th>Goal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$n = 2c$ for some integer $c$</td>
+      <td>$n-m = 2e$ for some integer $e$</td>
+    </tr>
+    <tr>
+      <td>$m = 2d$ for some integer $d$</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>$u(v-w) = uv-uw$ for all integers $u,v,w$</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>$n - m = 2c - 2d = 2(c-d)$</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>set $e = c-d$</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>$n -m = 2e$</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>While we modeled this proof as a table, it is notationally simpler to represent deduction 
+from assumption $A$ to goal $B$ (with some intermediate steps) vertically.</p>
+
+<center> <img src="/assets/images/png/deduction/proof_tree_example.png" title="proof tree example" alt="proof tree example" /> </center>
+
+<p>And we write $A \vdash B$ to indicate that we can prove the goal(s) $B$ given the assumption(s) $A$.</p>
+:ET
