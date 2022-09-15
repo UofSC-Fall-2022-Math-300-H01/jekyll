@@ -15,3 +15,12 @@ Sep 14
 Sep 16
 : More proofs and rules of inference
   : [Pre-reading]({% link notes/lean/proofs.md %})
+
+Sep 19
+: Negation and proof by contradiction
+  : [Pre-reading]({% link notes/lean/negation.md %})
+: [**HW 4 due**]({% link homework/04.md %}){: .label .label-red }
+
+Sep 21
+: Interactive mode for proving
+  : [Pre-reading]({% link notes/lean/mode.md %})
