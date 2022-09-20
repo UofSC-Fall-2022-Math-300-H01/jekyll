@@ -10,3 +10,4 @@ Sep 23
 Sep 26
 : New rules of inference 
   : [Pre-reading]({% link notes/predicate/rules.md %})
+: [**HW 5 due**]({% link homework/05.md %}){: .label .label-red }
