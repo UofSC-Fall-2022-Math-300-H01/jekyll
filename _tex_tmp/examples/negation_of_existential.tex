@@ -1,0 +1,25 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\infer0[\normalsize 3]{\neg \exists x~ A(x)}
+\infer0[\normalsize 0]{A(x)}
+\infer1{\exists x~ A(x)}
+\infer2{\bot} 
+\infer1[\normalsize 0]{\neg A(x)}
+\infer1{\forall x~ \neg A(x)} 
+\infer0[\normalsize 2]{\exists x~ A(x)}
+\infer0[\normalsize 1]{A(u)}
+\infer0[\normalsize 3]{\forall x~ \neg A(x)}
+\infer1{\neg A(u)}
+\infer2{\bot}
+\infer2[\normalsize 1]{\bot}
+\infer1[\normalsize 2]{\neg \exists u~ A(u)} 
+\infer2[\normalsize 3]{\neg \exists x~ A(x) \leftrightarrow \forall x~ \neg A(x)}
+\end{prooftree}
+        $$
+        \end{document}

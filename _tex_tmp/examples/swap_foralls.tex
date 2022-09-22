@@ -1,0 +1,16 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\hypo{\forall x~ \forall y~ A(x,y)}
+\infer1{\forall y~ A(x,y)}
+\infer1{A(x,y)}
+\infer1{\forall x~ A(x,y)}
+\infer1{\forall y~ \forall x~ A(x,y)}
+\end{prooftree}
+        $$
+        \end{document}

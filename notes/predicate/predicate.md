@@ -80,6 +80,26 @@ If $A(x,y)$ and $B(z)$ are predicates, then we make new formulas using
 Like with propositional logic, we can keep joining up formulas using these 
 connectives to make bigger and bigger new formulas. 
 
+## Functions 
+
+We already saw that predicates can be viewed as functions taking values in 
+propositions. But, predicate logic also allows actual (multi-variant) 
+functions $f(x,y,z)$ whose inputes comes from domain of discourse and whose 
+output is also in our domain discourse. 
+
+For example, if we are talking about $\mathbb{N}$, we might want to consider 
+the addition function
+$$
+\operatorname{Add} (n,m) = n + m 
+$$
+or multiplication 
+$$
+\operatorname{Mult}(n,m) = n\cdot m
+$$
+
+Given a function $f(x)$, we can make new predicates from an old ones $A(y)$ 
+via substitution $A(f(x))$. 
+
 ## Quantifiers 
 
 If we stopped here, our resulting logic would look like propositional logic 

@@ -1,0 +1,18 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\hypo{\exists x~ \exists y~ A(x,y)}
+\infer0[\normalsize 1]{\exists y~ A(x,y)}
+\infer0[\normalsize 0]{A(x,y)}
+\infer1{\exists u~ A(u,y)}
+\infer2[\normalsize 0]{\exists u~ A(u,y)}
+\infer1{\exists v~ \exists u~ A(u,v)}
+\infer2[\normalsize 1]{\exists v~ \exists u~ A(u,v)}
+\end{prooftree}
+        $$
+        \end{document}

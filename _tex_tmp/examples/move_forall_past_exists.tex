@@ -1,0 +1,19 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\infer0[\normalsize 1]{\exists x~ \forall y~ A(x,y)} 
+\infer0[\normalsize 0]{\forall v~ A(u,v)} 
+\infer1{A(u,v)}
+\infer1{\exists u~ A(u,v)}
+\infer2[\normalsize 0]{\exists u~ A(u,v)}
+\infer1{\forall v~ \exists u~ A(u,v)}
+\infer1[\normalsize 1]{\exists x~ \forall y~ A(x,y) \to 
+\forall v~ \exists u~ A(u,v)}
+\end{prooftree}
+        $$
+        \end{document}
