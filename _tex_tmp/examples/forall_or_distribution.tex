@@ -1,0 +1,21 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\begin{prooftree}
+\hypo{\forall x~ A(x) \lor \forall x~ B(x)} 
+\infer0[\normalsize 0]{\forall x~ A(x)} 
+\infer1{A(x)}
+\infer1{A(x) \lor B(x)} 
+\infer1{\forall x~ (A(x) \lor B(x))}
+\infer0[\normalsize 0]{\forall x~ B(x)} 
+\infer1{B(x)}
+\infer1{A(x) \lor B(x)} 
+\infer1{\forall x~ (A(x) \lor B(x))}
+\infer3[\normalsize 0]{\forall x (A(x) \lor B(x))}
+\end{prooftree}
+        $$
+        \end{document}

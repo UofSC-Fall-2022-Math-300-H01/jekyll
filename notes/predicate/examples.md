@@ -22,7 +22,7 @@ $$
 $$
 in general?
 
-To approach this, it makes sense to try to find a simple model and figure it 
+To approach this, it makes sense to try to find a simple model and figure if 
 the statement is true. Let's take $\mathbb{N}$ and interpret $A(x,y)$ as 
 $x=y$. Then, in natural language, the head of the implication says that for 
 any number $y$ there is some other number $x$ such that $x=y$. This of course 
@@ -120,9 +120,67 @@ called finding a _counter-example_. The counter-example being the witness to $\e
 From our analogy between $\forall$ and $\land$ and $\exists$ and $\lor$, we can guess at the 
 behavior when quantifiers and con/disjunction interact. 
 
-Indeed, the following are all valid formula. 
+Indeed, the following are valid formula. 
 $$
 \forall x~ (A(x) \land B(x)) \leftrightarrow \forall x~ A(x) \land \forall x~ B(x) \\
 \exists x~ (A(x) \lor B(x)) \leftrightarrow \exists x~ A(x) \lor \exists x~ B(x) 
 $$
 
+Let's think about $\forall x~ (A(x) \lor B(x))$ vs $\forall x~ A(x) \lor \forall x~ B(x)$. 
+Inituitively, whether $A(x)$ or $B(x)$ is true might depend on $x$. For example, in the 
+model $\mathbb{N}$ where we interpret $A(x)$ as $x$ is even and $B(x)$ as $x$ is odd. Then, 
+we know that everyone number is either even or odd. But not every number is even. Neither is 
+every number odd. 
+
+There is a still an implication. 
+{% eqn forall_or_distribution %}
+\begin{prooftree}
+\hypo{\forall x~ A(x) \lor \forall x~ B(x)} 
+\infer0[\normalsize 0]{\forall x~ A(x)} 
+\infer1{A(x)}
+\infer1{A(x) \lor B(x)} 
+\infer1{\forall x~ (A(x) \lor B(x))}
+\infer0[\normalsize 0]{\forall x~ B(x)} 
+\infer1{B(x)}
+\infer1{A(x) \lor B(x)} 
+\infer1{\forall x~ (A(x) \lor B(x))}
+\infer3[\normalsize 0]{\forall x (A(x) \lor B(x))}
+\end{prooftree}
+{% endeqn %}
+
+Similarly, one direction of distrubition of $\exists$ over $\land$ is valid. 
+{% eqn exists_and_distribution %}
+\begin{prooftree}
+\hypo{\exists x~ (A(x) \land B(x))} 
+\infer1{A(x) \land B(x)}
+\infer1{A(x)} 
+\infer1{\exists x~ A(x)} 
+\hypo{\exists x~ (A(x) \land B(x))} 
+\infer1{A(x) \land B(x)}
+\infer1{B(x)}
+\infer1{\exists x~ B(x)}
+\infer2{\exists x~ A(x) \land \exists x~ B(x)}
+\end{prooftree}
+{% endeqn %}
+
+But if we use the model $\mathbb{N}$ with $A(x)$ being $x > 2$ and $B(x)$ being 
+$x < 1$. Then $\exists x~ A(x) \land \exists x~ B(x)$ is true as there are 
+numbers greater than $2$ and there are also numbers less than $1$ (namely $0$). 
+However, $\exists x~ (A(x) \land B(x))$ is not true since no number is both 
+less than $1$ and greater than $2$.
+
+## Unique existence $$~\exists !$$ 
+
+Often, in mathematics, we are concerned with whether a list of conditions can completely 
+specify something, be it a number, a formula, or something else. This pattern of logic is 
+common enough that we introduce some shorthand notation. 
+
+The formula
+$$ 
+\exists x~ (A(x) \land \forall y~ (A(y) \to (x=y)))
+$$
+says that there is some $x$ that makes $A(x)$ true and if there is any other value that 
+makes $A(x)$ true then in fact it had to be the original value.
+
+This formula get its own compact notation: $\exists ! x~ A(x)$. This is read as there exists 
+a unique $x$ satisifying $A(x)$. 

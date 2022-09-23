@@ -1,6 +1,6 @@
 ---
 title: Lean
-ended: false
+ended: true
 ---
 
 Sep 12
