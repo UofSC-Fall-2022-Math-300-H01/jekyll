@@ -16,11 +16,11 @@ Sep 28
 : Models in predicate logic
   : [Pre-reading]({% link notes/predicate/models.md %})
 
-Sep 30
+Oct 3
 : Examples derivations 
   : [Pre-reading]({% link notes/predicate/examples.md %})
 
-Oct 3
+Oct 5
 : Predicate logic in Lean 
   : [Pre-reading]({% link notes/predicate/lean.md %})
 : [**HW 6 due**]({% link homework/06.md %}){: .label .label-red }
