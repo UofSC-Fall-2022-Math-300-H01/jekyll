@@ -24,3 +24,8 @@ Oct 5
 : Predicate logic in Lean 
   : [Pre-reading]({% link notes/predicate/lean.md %})
 : [**HW 6 due**]({% link homework/06.md %}){: .label .label-red }
+
+Oct 7
+: Examples in Lean 
+  : [Pre-reading]({% link notes/predicate/lean_pfs.md %})
+
