@@ -167,7 +167,7 @@ x_0,x_1,x_2,x_3,\ldots,x_m,\ldots
 $$
 where $0 \leq x_n < 1/(n+1)$. 
 
-## Identities. 
+## Identities
 
 These operations satisfy many identities relating them. Let's 
 take the following as an example. 
