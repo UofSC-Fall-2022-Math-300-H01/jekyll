@@ -1,0 +1,53 @@
+        \documentclass[14pt,border=2pt]{standalone}
+        \usepackage{amsmath,amssymb,tikz-cd,tikz,braids,ebproof}
+
+        \begin{document}
+        $$
+        \LARGE 
+
+\def\firstcircle{(0,0) circle (2cm)}
+\def\secondcircle{(0:2cm) circle (2cm)}
+\def\thirdcircle{(0,0) circle (0cm)}
+
+\begin{tikzpicture}
+    \begin{scope}[shift={(8cm,0cm)}]
+    	\draw (1,3) node {$X \cup Y$};
+        \begin{scope}
+            \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[gray,opacity=0.2] \firstcircle;
+	\end{scope}
+	\begin{scope}
+		\clip \firstcircle;
+		\fill[gray,opacity=0.2] \secondcircle;	
+	\end{scope}
+	\begin{scope}
+		    \clip \firstcircle (0,-3) rectangle (6,3);
+		\fill[gray,opacity=0.2] \secondcircle;
+	\end{scope}
+
+        \draw \firstcircle node[left=0.5cm] {$X$};
+        \draw \secondcircle node[right=0.5cm] {$Y$};
+    \end{scope}
+    
+   \draw \firstcircle node[left=0.5cm] {$X$};
+    \draw \secondcircle node [right=0.5cm] {$Y$};
+
+    \begin{scope}
+    	\draw (1,3) node {$X \cap Y$};
+      \clip \firstcircle;
+      \fill[gray,opacity=0.2] \secondcircle;	
+    \end{scope}
+
+    \begin{scope}[shift={(4cm,-6cm)}]
+    	\draw (1,3) node {$X \setminus Y$};
+       	\begin{scope}
+            \clip \secondcircle (-3,-3) rectangle (3,3);
+        \fill[gray,opacity=0.2] \firstcircle;
+	\end{scope}
+	\draw \firstcircle node[left=0.5cm] {$X$};
+        \draw \secondcircle node [right=0.5cm] {$Y$};
+    \end{scope}
+
+\end{tikzpicture}
+        $$
+        \end{document}
