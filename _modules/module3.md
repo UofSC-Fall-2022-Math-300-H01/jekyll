@@ -1,6 +1,6 @@
 ---
 title: Predicate logic
-ended: false
+ended: true
 ---
 
 Sep 23
