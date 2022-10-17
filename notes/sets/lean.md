@@ -42,7 +42,7 @@ Membership now becomes satisifcation of the underlying predicate.
 {% highlight lean %}
 variable (U : Type) 
 
-def Mem (x : U) (X : Set U) : Prop := U x 
+def Mem (x : U) (X : Set U) : Prop := X x 
 {% endhighlight %}
 
 We introduce standard mathematical notation for membership `∈` typed as 
