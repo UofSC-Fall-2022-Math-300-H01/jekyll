@@ -1,6 +1,6 @@
 ---
 title: Sets
-ended: false
+ended: true
 ---
 
 Oct 10
@@ -17,6 +17,6 @@ Oct 17
   : [Pre-reading]({% link notes/sets/lean.md %})
 : [**HW 8 due**]({% link homework/08.md %}){: .label .label-red }
 
-Oct 12 
+Oct 19 
 : More set theoretic proofs in Lean
   : [Pre-reading]({% link notes/sets/more_lean.md %})
