@@ -164,8 +164,8 @@ In other words, every element of $X$ is also an element of $Y$. We write $X \sub
 Y$ is $X$ is a subset of $Y$. If $X \subseteq Y$ and $ X \not = Y$, then we write 
 $X \subset Y$. 
 
-Not that this means we can express extensionality as $X = Y$ if and only if $X \subseteq Y$ 
-and $Y \subset X$.
+Note that this means we can express extensionality as $X = Y$ if and only if $X \subseteq Y$ 
+and $Y \subseteq X$.
 
 Recall that $\mathbb{R}$ is the set of _real numbers_. These numbers are represented by 
 points on an infinite line and should be familiar from calculus. (This is not a precise 
@@ -181,8 +181,8 @@ $$
 
 Then 
 $$
-[0,1] \subset (0,1] \subset (0,1) \\
-\lbrack 0,1] \subset [0,1) \subset (0,1) \\
+[0,1] \supseteq (0,1] \supseteq (0,1) \\
+\lbrack 0,1] \supseteq [0,1) \supseteq (0,1) \\
 (0,1] \nsubseteq [0,1) \\
 \lbrack 0,1) \nsubseteq (0,1]
 $$
