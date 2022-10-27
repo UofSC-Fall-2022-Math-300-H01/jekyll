@@ -120,6 +120,52 @@ Again this is not always an equality. For example, lets taking our
 squaring map but now view it a function $\mathbb{Z} \to \mathbb{Z}$. 
 If $X = \mathbb{N}$, then $f^{-1}(f(\mathbb{N})) = \mathbb{Z}$. 
 
+Both images and pre-images behave well with respect to unions and 
+intersections. We have
+
+{% highlight lean %}
+
+-- The union of inverse images is the inverse image of the union
+theorem union_preimage (f : α → β) (Y Y' : Set β) : 
+  f⁻¹ (Y ∪ Y') = f⁻¹ Y ∪ f⁻¹ Y' := by rfl 
+
+-- The intersection of inverse images is the inverse image of 
+-- the intersection 
+theorem inter_preimage (f : α → β) (Y Y' : Set β) : 
+  f⁻¹ (Y ∩ Y') = f⁻¹ Y ∩ f⁻¹ Y' := by rfl 
+
+-- The union of images is the image of the union 
+theorem union_image (f : α → β) (X X' : Set α) : 
+  Image f (X ∪ X') = Image f X ∪ Image f X' := by 
+    set_extensionality b 
+    · intro h 
+      have ⟨a,h'⟩ := h 
+      cases h'.left with 
+      | inl hl => exact Or.inl ⟨a,hl,h'.right⟩
+      | inr hr => exact Or.inr ⟨a,hr,h'.right⟩ 
+    · intro h 
+      cases h with 
+      | inl hl => 
+        have ⟨a,h'⟩ := hl 
+        exact ⟨a,⟨Or.inl h'.left,h'.right⟩⟩ 
+      | inr hr => 
+        have ⟨a,h'⟩ := hr 
+        exact ⟨a,⟨Or.inr h'.left,h'.right⟩⟩ 
+
+-- The image of the intersection is a subset of the 
+-- intersection of the image
+theorem inter_image (f : α → β) (X X' : Set α) : 
+  Image f (X ∩ X') ⊆ Image f X ∩ Image f X' := by 
+    intro b h 
+    have ⟨a,h'⟩ := h 
+    exact ⟨⟨a,⟨h'.left.left,h'.right⟩⟩,⟨a,⟨h'.left.right,h'.right⟩⟩⟩  
+{% endhighlight %}
+
+In general, $f (X \cap X') \neq f(X) \cap f(X')$. For example, take 
+the unique function $f : \mathbb{Z} \to \lbrace 0 \rbrace$, $X$ the odd integers, 
+and $X'$ the even integers. Then $X \cap X' = \varnothing $ but 
+$f(X) \cap f(X') = \lbrace 0\rbrace$. 
+
 ## Being in bijection 
 
 Saying that we have a bijection $f : A \to B$ is quite strong. For 
@@ -171,11 +217,11 @@ then $f$ is not surjective. If $|X| > |Y|$, then $f$ is not injective.
 The previous results tell us to recognize bijections between finite sets. 
 We see that for $\sigma : [m] \to [m]$ to be a bijection. We have some 
 value $\sigma(0)$. Then there is some value $\sigma(1) \neq \sigma(0)$. 
-Then $\sigma(2)$ \neq \sigma(1)$ and $\neq \sigma(0)$...Finally, leaving a 
+Then $\sigma(2) \neq \sigma(1)$ and $\neq \sigma(0)$ . . . Finally, leaving a 
 unique choice for $\sigma(m)$.
 
 So a self-bijection of $[m]$ is scrambling of the order of the numbers $0,1,2,\ldots,
-m-1$. There are $m$ choices for the value of $0$, $m-1$ choices for $1$,..., 
+m-1$. There are $m$ choices for the value of $0$, $m-1$ choices for $1$,. . ., 
 $2$ choices for $m-2$, and a single choice for $m-1$. Thus, we have 
 $$
 m! := m(m-1)(m-2) \cdots 2 \cdot 1 
@@ -187,5 +233,5 @@ as (possibly) disordered lists:
 $$
 123, 132, 213, 312, 231, 321 
 $$
-The first entry of list is the identity function. 
+The first entry of the list is the identity function. 
 
