@@ -24,14 +24,14 @@ of mathematical data: for the function $g : B \to A$ and then the proof that $g 
 {% highlight lean %}
 structure LeftInverse (f : α → β) where 
   to_fun : β → α  
-  inv : to_fun ∘ f = id 
+  invl : to_fun ∘ f = id 
 
 def TheFun (g : LeftInverse f) : β → α := g.to_fun 
-example : g.to_fun ∘ f = id := g.inv
+example : g.to_fun ∘ f = id := g.invl
 {% endhighlight %}
 
 Given a `(g : LeftInverse f)`, we can access the function `β → α` as `g.to_fun` and 
-the proof that `g.to_fun ∘ f = id` using `g.inv`. To construct a `LeftInverse`, we 
+the proof that `g.to_fun ∘ f = id` using `g.invl`. To construct a `LeftInverse`, we 
 need to supply both pieces of data
 
 {% highlight lean %}

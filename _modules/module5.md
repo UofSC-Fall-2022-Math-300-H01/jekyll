@@ -17,5 +17,5 @@ Oct 26
   : [Pre-reading]({% link notes/functions/inverses.md %})
 
 Oct 28 
-: Functions as built in set theory 
+: Functions and sets
   : [Pre-reading]({% link notes/functions/in_sets.md %})
