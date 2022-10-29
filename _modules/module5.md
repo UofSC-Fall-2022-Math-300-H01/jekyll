@@ -1,6 +1,6 @@
 ---
 title: Functions
-ended: false
+ended: true
 ---
 
 Oct 21 
