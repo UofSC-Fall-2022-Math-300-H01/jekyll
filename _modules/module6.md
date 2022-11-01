@@ -14,10 +14,10 @@ Nov 2
   : [Pre-reading]({% link notes/relations/properties.md %})
 
 Nov 4 
-: Equivalence relations 
-  : [Pre-reading]({% link notes/relations/equiv.md %})
+: Partial and total orders
+  : [Pre-reading]({% link notes/relations/orders.md %})
 
 Nov 7
-: Partial and total orders 
-  : [Pre-reading]({% link notes/relations/orders.md %})
+: Equivalence relations  
+  : [Pre-reading]({% link notes/relations/equiv.md %})
 : [**HW 11 due**]({% link homework/11.md %}){: .label .label-red }
