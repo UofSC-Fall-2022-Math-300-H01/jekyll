@@ -150,3 +150,26 @@ we will see how $\mathbb{N}$ is defined and how facts like these
 are proven soon. (In fact, some of these results don't exist at 
 the moment 🫢.) 
 
+**Example**. Let's take the set $\lbrace 0,1,2 \rbrace$ and 
+construct relations satisfying some, and not other, properties 
+above. 
+- $R = \varnothing$ is irreflexive, symmetric, antisymmetric, asymmetric, and transitive. 
+It is not reflexive or total. 
+- $R = \lbrace (0,0) \rbrace$. This is symmetric, 
+antisymmetric, and transitive. It is not reflexive, irreflexive, asymmetric, 
+or total.
+- $R = \lbrace (0,1), (1,0) \rbrace$. This is irreflexive and symmetric. 
+It is not reflexive, irreflexive, antisymmetric, asymmetric, transitive, 
+or total.
+- $R = \lbrace (0,1), (1,2) \rbrace$. This is irreflexive, antisymmetric, 
+and asymmetric. It is not reflexive, symmetric, transitive, or total.
+- $R = \lbrace (0,1), (1,2), (2,0) \rbrace$ is irreflexive, antisymmetric, 
+asymmetric, and total. It is not reflexive, symmetric, or transitive. 
+- $R = \lbrace (0,0), (0,1), (1,2), (2,0) \rbrace$ is antisymmetric but is 
+not reflexive, irreflexive, symmetric, asymmetric, transitive, or total. 
+- $R = \lbrace (0,0), (0,1), (1,0), (1,1) \rbrace$ is symmetric and transitive 
+but is not reflexive, irreflexive, antisymmetric, asymmetric, or total. 
+- $R = \lbrace (0,0), (0,1), (1,0), (1,1), (1,2), (2,0), (2,2) \rbrace$ is 
+reflexive and total. It is not irreflexive, symmetric, antisymmetric, 
+asymmetric, or transitive. 
+
