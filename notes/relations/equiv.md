@@ -18,6 +18,14 @@ that is
 - symmetric and 
 - transitive 
 
+Equivalence relations are already built in to Lean's core code 
+{% highlight lean %}
+structure Equivalence {α : Sort u} (r : α → α → Prop) : Prop where
+  refl  : ∀ x, r x x
+  symm  : ∀ {x y}, r x y → r y x
+  trans : ∀ {x y z}, r x y → r y z → r x z
+{% endhighlight %}
+
 The prototypical example of an equivalence relation is equality $=$. 
 Here is another example prominent example. 
 
