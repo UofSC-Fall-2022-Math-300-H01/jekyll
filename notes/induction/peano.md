@@ -74,7 +74,7 @@ It is important to note that, as defined above, $\mathbb{N}$ are a
 specification and **not** a construction. Lean's `Nat` is a construction 
 that meets this specification. Below is another one. 
 
-**Exmaple**. We can build the natural numbers starting from nothing! 
+**Example**. We can build the natural numbers starting from nothing! 
 More precisely, the empty set $\varnothing$. We set $0 := \varnothing$ 
 and $s(X) = X \cup \lbrace X \rbrace$. Then, 
 $$

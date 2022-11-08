@@ -1,6 +1,6 @@
 ---
 title: Relations 
-ended: false
+ended: true
 ---
 
 Oct 31 
