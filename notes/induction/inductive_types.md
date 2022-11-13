@@ -10,7 +10,7 @@ grand_parent: Notes
 
 ## Behind the curtain 
 
-`Nat` is not alone. Inductive constructios 
+`Nat` is not alone. Inductive constructions 
 can model a vast amount of mathematics. 
 
 We can create the propositions `True` and `False` 
@@ -30,8 +30,8 @@ building it. With `True`, you have exactly one: `intro`.
 
 When building a function `f : Nat → α`, recursion told 
 us we needed to specify a value of `f` for each way 
-we construct a `Nat`, `zero` and `succ n`. What does 
-recursion look like here? 
+we construct a `Nat`: one for `zero` and one for each `succ n`. 
+What does recursion look like here? 
 
 {% highlight lean %}
 theorem False.elim {p : Prop} (no : False) : p := no.rec 
