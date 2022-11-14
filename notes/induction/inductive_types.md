@@ -75,6 +75,29 @@ theorem Or.elim {p q r : Prop} (h : Or p q) (h₁ : p → r)
     | inr h => h₂ h 
 {% endhighlight %}
 
+We can also model existential propositions using inductive 
+types. 
+
+{% highlight lean %}
+inductive Exists {α : Type} (P : α → Prop) : Prop where 
+  | intro (a : α) (h : P a) 
+
+theorem Exists.elim {α : Type} {p : Prop} {P : α → Prop} 
+  (e : Exists P) (h : ∀ a, P a → p) : p := 
+    match e with 
+    | intro a h' => h a h' 
+{% endhighlight %}
+
+Even equality fits into a inductive construction. 
+{% highlight lean %}
+inductive Eq {α : Type} : α → α → Prop where 
+  | refl (a : α) : Eq a a  
+
+theorem Eq.symm {α : Type} (a a' : α) (h : Eq a a') : Eq a' a := by 
+  match h with 
+  | refl a => exact Eq.refl a 
+{% endhighlight %}
+
 As we know from shopping, lists are also built recursively. 
 {% highlight lean %}
 inductive List (α : Type) where 
