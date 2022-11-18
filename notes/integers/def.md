@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The definition(s)
+title: The definition
 nav_order: 1
 has_children: false
 has_toc: false
@@ -76,7 +76,7 @@ $$
 and let 
 $$
 \begin{aligned}
-i : \mathbb{N} & \to \mathbb{Z} \\
+j : \mathbb{N} & \to \mathbb{Z} \\
 n & \mapsto [(0,n)]
 \end{aligned}
 $$
@@ -127,5 +127,73 @@ $$
 $$
 
 {% proof %}
-
+The possible problem with this as a function is that the output 
+might depend on the representatives of the equivalence. Certainly 
+the function 
+$$
+([(n_1,m_1)],[(n_2,m_2)]) \mapsto (n_1+n_2,m_1+m_2)
+$$
+is not well-defined. For example, $[(0,0)] = [(1,1)]$ but we get 
+different outputs for $([(0,0)],[(0,0)])$ and $([(1,1)],[(1,1)])$.
+<br><br>
+Assume that $[(n_1,m_1)] = [(n_1^\prime,m_1^\prime)]$ and that 
+$[(n_2,m_2)] = [(n_2^\prime,m_2^\prime)]$. Then 
+$$
+n_1 + m_1^\prime = n_1^\prime + m_1 \\
+n_2 + m_2^\prime = n_2^\prime + m_2 
+$$
+The two outputs we get are $(n_1+n_2,m_1+m_2)$ and $(n_1^\prime + 
+n_2^\prime, m_1^\prime + m_2^\prime)$. We need to check these 
+give the same equivalence class. It is equivalent to checking that 
+$(n_1+n_2,m_1+m_2) \sim (n_1^\prime+n_2^\prime,m_1^\prime+m_2^\prime)$. 
+We have 
+$$
+n_1+n_2+m_1^\prime + m_2^\prime = n_1^\prime+n_2^\prime +m_1+m_2 
+$$
+using the equalities above. 
 {% endproof %}
+
+The function $i$ now satisfies 
+$$
+i(n+m) = [(n+m,0)] = [(n,0)] + [(m,0)] = i(n) + i(m) 
+$$
+so it intertwines addition in $\mathbb{N}$ and addition in $\mathbb{Z}$. 
+Similarly $j(n+m) = j(n) + j(m)$. 
+
+**Example**. 
+- We have 
+$$
+[(n,m)] + [(0,0)] = [(0,0)] + [(n,m)] = [(n,m)]
+$$
+for any $(n,m)$. 
+- We have
+$$
+[(n,0)] + [(0,m)] = \begin{cases} [(n-m,0)] & \text{ if }n \geq m \\ 
+[(0,m-n)] & \text{ if } n \leq m \end{cases}
+$$
+In particular, $[(n,0)] + [(0,n)] = [(0,0)]$. 
+
+So $[(n,0)]$ is really $n$ while $[(0,n)]$ is $-n$ (though we could 
+reverse the roles here). 
+
+**Theorem**. The function 
+$$
+\begin{aligned}
+\mathbb{Z} \times \mathbb{Z} & \to \mathbb{Z} \\
+([(n_1,m_1)],[(n_2,m_2)]) & \mapsto [(n_1n_2 + m_1m_2,n_1m_2+n_2m_1)]
+\end{aligned}
+$$
+is well-defined. 
+
+We omit the proof of this theorem. Let's look at the outputs of this function 
+on simple entries. 
+
+- What if we input $i(n)$ and $i(m)$? Then, $i(nm) = [(nm,0)]$ 
+comes out.
+- What if we inpute $j(n)$ and $j(m)$? Then we get $[(nm,0)] = i(nm)$. 
+- How about $i(n)$ and $j(m)$? Then we get $[(0,nm)] = j(nm)$. 
+
+If you think about this for a little bit, you will recognize it as 
+_multiplication_ on $\mathbb{Z}$. 
+
+Next we will compare this to Lean's `Int`.

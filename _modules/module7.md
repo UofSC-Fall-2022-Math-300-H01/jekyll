@@ -1,6 +1,6 @@
 ---
 title: Induction 
-ended: false
+ended: true
 ---
 
 Nov 9 
