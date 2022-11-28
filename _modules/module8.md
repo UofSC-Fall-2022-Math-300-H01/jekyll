@@ -10,7 +10,7 @@ Nov 21
 Nov 28 
 : Lean's `Int`
   : [Pre-reading]({% link notes/integers/int.md %})
-: **Project draft due**]{: .label .label-yellow }
+: **Project draft due**{: .label .label-yellow }
 
 Nov 30
 : Modular arithmetic

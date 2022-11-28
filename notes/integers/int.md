@@ -56,6 +56,16 @@ def add (m n : Int) : Int :=
   | negSucc m, negSucc n => negSucc (succ (m + n))
 {% endhighlight %}
 
+This uses `subNatNat` (read as subtract a natural number from a 
+natural number). 
+{% highlight lean %}
+def subNatNat (m n : Nat) : Int :=
+  match (n - m : Nat) with
+  | 0        => ofNat (m - n)  -- m ≥ n
+  | (succ k) => negSucc k
+{% endhighlight %}
+Natural number subtraction returns `0` if `m ≥ n`. 
+
 On the other hand, perhaps multiplication looks simpler than the 
 formula we had before. 
 {% highlight lean %}
