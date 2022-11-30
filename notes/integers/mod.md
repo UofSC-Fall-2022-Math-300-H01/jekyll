@@ -88,7 +88,7 @@ descends to
 $$
 \overline{r} : \mathbb{Z}/m\mathbb{Z} \to \mathbb{N}
 $$
-Moreover, it is a bijection with its image $\lbrace n \mid 0 \leq n < r \rbrace$. 
+Moreover, it is a bijection with its image $\lbrace n \mid 0 \leq n < m \rbrace$. 
 
 {% proof %}
 To show that a function descends to the quotient by an equivalence 
@@ -97,11 +97,11 @@ whenever $n \equiv n' \mod m$ we have $r_n = r_{n'}$.
 
 By definition, we have $n - n' = cm$ for some $c$. Thus, 
 $$
-q_n m + r_n - (q_{n'}m + r_n') = cm 
+q_n m + r_n - (q_{n'}m + r_{n'}) = cm 
 $$
 or 
 $$
-r_n - r_{n'} = (c + q_{n'} + q_n)m
+r_n - r_{n'} = (c - q_{n'} + q_n)m
 $$
 In other words, $r_n - r_{n'}$ is divisible by $m$. But since $0 \leq r_n, r_{n'} < m$, 
 we have 
@@ -120,7 +120,7 @@ $\lbrace n \mid 0 \leq n < m \brace$.
 To finish, we check that $\overline{r}$ is injective. Assume that $r_n = r_{n'}$. 
 Then 
 $$
-n - n' = q_n m + r_n - (q_{n'}m + r_n) = (q_n - q_{n')m 
+n - n' = q_n m + r_n - (q_{n'}m + r_n) = (q_n - q_{n'})m 
 $$
 so $n \equiv n' \mod m$. Thus, $\overline{r}$ is injective and a bijection 
 onto its image. 
