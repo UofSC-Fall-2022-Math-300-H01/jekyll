@@ -1,7 +1,7 @@
 ---
 title: Week 15 Announcement
 week: 15
-date: 2022-12-02
+date: 2022-11-25
 ---
 
 For the last week of classes, make sure 
