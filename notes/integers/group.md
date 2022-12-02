@@ -20,7 +20,7 @@ $$
 n + (-n) = 0 = (-n) + n
 $$
 We've seen how to do this via a quotient of $\mathbb{N} \times \mathbb{N}$ 
-by an equivalence and via inductive types in Lean. 
+by an equivalence relation and via inductive types in Lean. 
 
 The structure of $(\mathbb{Z},+)$ is a particular instance of a 
 general notion of a _group_. 
